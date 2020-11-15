@@ -5,6 +5,10 @@ void HardwareSerialIO::begin(HardwareSerial& hs) {
   _hs = &hs;
 }
 
+void HardwareSerialIO::begin(usb_serial_class& hs) {
+  _hs = &hs;
+}
+
 size_t HardwareSerialIO::available(void) {
   return (size_t)_hs->available();
 }
